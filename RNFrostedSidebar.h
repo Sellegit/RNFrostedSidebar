@@ -66,9 +66,9 @@
 // An optional delegate to respond to interaction events
 @property (nonatomic, weak) id <RNFrostedSidebarDelegate> delegate;
 
-- (instancetype)initWithImages:(NSArray *)images selectedIndices:(NSIndexSet *)selectedIndices borderColors:(NSArray *)colors;
-- (instancetype)initWithImages:(NSArray *)images selectedIndices:(NSIndexSet *)selectedIndices;
-- (instancetype)initWithImages:(NSArray *)images;
+- (instancetype)initWithImages:(NSArray *)images titles:(NSArray *)titles selectedIndices:(NSIndexSet *)selectedIndices borderColors:(NSArray *)colors;
+- (instancetype)initWithImages:(NSArray *)images titles:(NSArray *)titles selectedIndices:(NSIndexSet *)selectedIndices;
+- (instancetype)initWithImages:(NSArray *)images titles:(NSArray *)titles;
 
 - (void)show;
 - (void)showAnimated:(BOOL)animated;

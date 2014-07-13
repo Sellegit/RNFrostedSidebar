@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		308DE677197064420072122B /* UniversalLib */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 308DE678197064420072122B /* Build configuration list for PBXAggregateTarget "UniversalLib" */;
+			buildPhases = (
+				308DE67B197064470072122B /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = UniversalLib;
+			productName = UniversalLib;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		308DE646197063580072122B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308DE645197063580072122B /* Foundation.framework */; };
+		308DE654197063580072122B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308DE653197063580072122B /* XCTest.framework */; };
+		308DE655197063580072122B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308DE645197063580072122B /* Foundation.framework */; };
+		308DE657197063580072122B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308DE656197063580072122B /* UIKit.framework */; };
+		308DE65A197063580072122B /* libRNFrostedSidebar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 308DE642197063580072122B /* libRNFrostedSidebar.a */; };
+		308DE660197063580072122B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 308DE65E197063580072122B /* InfoPlist.strings */; };
+		308DE662197063580072122B /* RNFrostedSidebarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 308DE661197063580072122B /* RNFrostedSidebarTests.m */; };
+		308DE6761970636F0072122B /* RNFrostedSidebar.m in Sources */ = {isa = PBXBuildFile; fileRef = 308DE6751970636F0072122B /* RNFrostedSidebar.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		308DE658197063580072122B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 308DE63A197063580072122B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 308DE641197063580072122B;
+			remoteInfo = RNFrostedSidebar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		308DE640197063580072122B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		308DE642197063580072122B /* libRNFrostedSidebar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNFrostedSidebar.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		308DE645197063580072122B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		308DE649197063580072122B /* RNFrostedSidebar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNFrostedSidebar-Prefix.pch"; sourceTree = "<group>"; };
+		308DE652197063580072122B /* RNFrostedSidebarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNFrostedSidebarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		308DE653197063580072122B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		308DE656197063580072122B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		308DE65D197063580072122B /* RNFrostedSidebarTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RNFrostedSidebarTests-Info.plist"; sourceTree = "<group>"; };
+		308DE65F197063580072122B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		308DE661197063580072122B /* RNFrostedSidebarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNFrostedSidebarTests.m; sourceTree = "<group>"; };
+		308DE6741970636F0072122B /* RNFrostedSidebar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNFrostedSidebar.h; path = ../../RNFrostedSidebar.h; sourceTree = "<group>"; };
+		308DE6751970636F0072122B /* RNFrostedSidebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNFrostedSidebar.m; path = ../../RNFrostedSidebar.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		308DE63F197063580072122B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308DE646197063580072122B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308DE64F197063580072122B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308DE65A197063580072122B /* libRNFrostedSidebar.a in Frameworks */,
+				308DE654197063580072122B /* XCTest.framework in Frameworks */,
+				308DE657197063580072122B /* UIKit.framework in Frameworks */,
+				308DE655197063580072122B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		308DE639197063580072122B = {
+			isa = PBXGroup;
+			children = (
+				308DE647197063580072122B /* RNFrostedSidebar */,
+				308DE65B197063580072122B /* RNFrostedSidebarTests */,
+				308DE644197063580072122B /* Frameworks */,
+				308DE643197063580072122B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		308DE643197063580072122B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				308DE642197063580072122B /* libRNFrostedSidebar.a */,
+				308DE652197063580072122B /* RNFrostedSidebarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		308DE644197063580072122B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				308DE645197063580072122B /* Foundation.framework */,
+				308DE653197063580072122B /* XCTest.framework */,
+				308DE656197063580072122B /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		308DE647197063580072122B /* RNFrostedSidebar */ = {
+			isa = PBXGroup;
+			children = (
+				308DE6741970636F0072122B /* RNFrostedSidebar.h */,
+				308DE6751970636F0072122B /* RNFrostedSidebar.m */,
+				308DE648197063580072122B /* Supporting Files */,
+			);
+			path = RNFrostedSidebar;
+			sourceTree = "<group>";
+		};
+		308DE648197063580072122B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				308DE649197063580072122B /* RNFrostedSidebar-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		308DE65B197063580072122B /* RNFrostedSidebarTests */ = {
+			isa = PBXGroup;
+			children = (
+				308DE661197063580072122B /* RNFrostedSidebarTests.m */,
+				308DE65C197063580072122B /* Supporting Files */,
+			);
+			path = RNFrostedSidebarTests;
+			sourceTree = "<group>";
+		};
+		308DE65C197063580072122B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				308DE65D197063580072122B /* RNFrostedSidebarTests-Info.plist */,
+				308DE65E197063580072122B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		308DE641197063580072122B /* RNFrostedSidebar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 308DE665197063580072122B /* Build configuration list for PBXNativeTarget "RNFrostedSidebar" */;
+			buildPhases = (
+				308DE63E197063580072122B /* Sources */,
+				308DE63F197063580072122B /* Frameworks */,
+				308DE640197063580072122B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNFrostedSidebar;
+			productName = RNFrostedSidebar;
+			productReference = 308DE642197063580072122B /* libRNFrostedSidebar.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		308DE651197063580072122B /* RNFrostedSidebarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 308DE668197063580072122B /* Build configuration list for PBXNativeTarget "RNFrostedSidebarTests" */;
+			buildPhases = (
+				308DE64E197063580072122B /* Sources */,
+				308DE64F197063580072122B /* Frameworks */,
+				308DE650197063580072122B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				308DE659197063580072122B /* PBXTargetDependency */,
+			);
+			name = RNFrostedSidebarTests;
+			productName = RNFrostedSidebarTests;
+			productReference = 308DE652197063580072122B /* RNFrostedSidebarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		308DE63A197063580072122B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Sellegit;
+			};
+			buildConfigurationList = 308DE63D197063580072122B /* Build configuration list for PBXProject "RNFrostedSidebar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 308DE639197063580072122B;
+			productRefGroup = 308DE643197063580072122B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				308DE641197063580072122B /* RNFrostedSidebar */,
+				308DE651197063580072122B /* RNFrostedSidebarTests */,
+				308DE677197064420072122B /* UniversalLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		308DE650197063580072122B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308DE660197063580072122B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		308DE67B197064470072122B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# define output folder environment variable\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target RNFrostedSidebar ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\nxcodebuild -target RNFrostedSidebar -configuration ${CONFIGURATION} -sdk iphonesimulator -arch i386 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 2. Create universal binary file using lipo\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\"\n\n# Last touch. copy the header files. Just for convenience\n# cp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/include\" \"${UNIVERSAL_OUTPUTFOLDER}/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		308DE63E197063580072122B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308DE6761970636F0072122B /* RNFrostedSidebar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		308DE64E197063580072122B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				308DE662197063580072122B /* RNFrostedSidebarTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		308DE659197063580072122B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 308DE641197063580072122B /* RNFrostedSidebar */;
+			targetProxy = 308DE658197063580072122B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		308DE65E197063580072122B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				308DE65F197063580072122B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		308DE663197063580072122B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		308DE664197063580072122B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		308DE666197063580072122B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/RNFrostedSidebar.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RNFrostedSidebar/RNFrostedSidebar-Prefix.pch";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		308DE667197063580072122B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/RNFrostedSidebar.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RNFrostedSidebar/RNFrostedSidebar-Prefix.pch";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		308DE669197063580072122B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RNFrostedSidebar/RNFrostedSidebar-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RNFrostedSidebarTests/RNFrostedSidebarTests-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		308DE66A197063580072122B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RNFrostedSidebar/RNFrostedSidebar-Prefix.pch";
+				INFOPLIST_FILE = "RNFrostedSidebarTests/RNFrostedSidebarTests-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		308DE679197064420072122B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		308DE67A197064420072122B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		308DE63D197063580072122B /* Build configuration list for PBXProject "RNFrostedSidebar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				308DE663197063580072122B /* Debug */,
+				308DE664197063580072122B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		308DE665197063580072122B /* Build configuration list for PBXNativeTarget "RNFrostedSidebar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				308DE666197063580072122B /* Debug */,
+				308DE667197063580072122B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		308DE668197063580072122B /* Build configuration list for PBXNativeTarget "RNFrostedSidebarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				308DE669197063580072122B /* Debug */,
+				308DE66A197063580072122B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		308DE678197064420072122B /* Build configuration list for PBXAggregateTarget "UniversalLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				308DE679197064420072122B /* Debug */,
+				308DE67A197064420072122B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 308DE63A197063580072122B /* Project object */;
+}
