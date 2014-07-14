@@ -79,3 +79,10 @@
 - (void)dismissAnimated:(BOOL)animated completion:(void (^)(BOOL finished))completion;
 
 @end
+
+
+@interface UIImage (rn_Blur)
+
+- (UIImage *)applyBlurWithRadius:(CGFloat)blurRadius tintColor:(UIColor *)tintColor saturationDeltaFactor:(CGFloat)saturationDeltaFactor maskImage:(UIImage *)maskImage;
+
+@end

@@ -31,6 +31,8 @@ namespace RNFrostedSidebarBinding {
   public delegate void DismissAnimatedCompletionBlock(bool finished);
 
 
+
+
   [BaseType (typeof (UIViewController))]
   public partial interface RNFrostedSidebar {
 
@@ -96,5 +98,12 @@ namespace RNFrostedSidebarBinding {
 
     [Export ("dismissAnimated:completion:")]
     void DismissAnimated (bool animated, DismissAnimatedCompletionBlock completion);
+  }
+
+  [Category, BaseType (typeof (UIImage))]
+  public partial interface Rn_Blur_UIImage {
+
+    [Export ("applyBlurWithRadius:tintColor:saturationDeltaFactor:maskImage:")] 
+    UIImage ApplyBlurWithRadius (float blurRadius, UIColor tintColor, float saturationDeltaFactor, [NullAllowed] UIImage maskImage);
   }
 }
