@@ -400,6 +400,12 @@ static RNFrostedSidebar *rn_frostedMenu;
                      }];
 }
 
+- (UIImage*)blurImageForController:(UIViewController *)controller {
+    UIImage *blurImage = [controller.view rn_screenshot];
+    blurImage = [blurImage applyBlurWithRadius:5 tintColor:self.tintColor saturationDeltaFactor:1.8 maskImage:nil];
+    return blurImage;
+}
+
 - (void)showInViewController:(UIViewController *)controller animated:(BOOL)animated {
     if (rn_frostedMenu != nil) {
         [rn_frostedMenu dismissAnimated:NO completion:nil];
@@ -411,8 +417,14 @@ static RNFrostedSidebar *rn_frostedMenu;
     
     rn_frostedMenu = self;
     
-    UIImage *blurImage = [controller.view rn_screenshot];
-    blurImage = [blurImage applyBlurWithRadius:5 tintColor:self.tintColor saturationDeltaFactor:1.8 maskImage:nil];
+    UIImage *blurImage;
+    
+    if ([self.delegate respondsToSelector:@selector(sidebar:blurImageForController:)]) {
+        blurImage = [self.delegate sidebar:self blurImageForController:controller];
+    } else {
+        blurImage = [controller.view rn_screenshot];
+        blurImage = [blurImage applyBlurWithRadius:5 tintColor:self.tintColor saturationDeltaFactor:1.8 maskImage:nil];
+    }
     
     [self rn_addToParentViewController:controller callingAppearanceMethods:YES];
     self.view.frame = controller.view.bounds;

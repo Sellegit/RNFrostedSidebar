@@ -26,6 +26,9 @@ namespace RNFrostedSidebarBinding {
 
     [Export ("sidebar:didEnable:itemAtIndex:")]
     void DidEnable (RNFrostedSidebar sidebar, bool itemEnabled, uint index);
+
+    [Export ("sidebar:blurImageForController:")]
+    UIImage GetBlurImage (RNFrostedSidebar sidebar, UIViewController controller);
   }
 
   public delegate void DismissAnimatedCompletionBlock(bool finished);

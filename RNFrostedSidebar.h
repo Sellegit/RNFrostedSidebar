@@ -21,6 +21,7 @@
 - (void)sidebar:(RNFrostedSidebar *)sidebar didDismissFromScreenAnimated:(BOOL)animatedYesOrNo;
 - (void)sidebar:(RNFrostedSidebar *)sidebar didTapItemAtIndex:(NSUInteger)index;
 - (void)sidebar:(RNFrostedSidebar *)sidebar didEnable:(BOOL)itemEnabled itemAtIndex:(NSUInteger)index;
+- (UIImage*)sidebar:(RNFrostedSidebar *)sidebar blurImageForController:(UIViewController*)controller;
 @end
 
 @interface RNFrostedSidebar : UIViewController
