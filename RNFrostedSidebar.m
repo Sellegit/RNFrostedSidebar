@@ -202,7 +202,7 @@
     CGFloat titleHeight = height - width;
     self.imageView.frame = CGRectMake(0, 0, width, width);
     self.imageView.center = CGPointMake(width/2, width/2);
-    self.titleView.font = [self.titleView.font fontWithSize:titleHeight / 2.0f];
+    self.titleView.font = [self.titleView.font fontWithSize:12.0f];//titleHeight / 2.0f];
     CGFloat requiredWidth = [self.titleView sizeThatFits:CGSizeMake(CGFLOAT_MAX, titleHeight)].width;
     if (requiredWidth > width) {
         self.titleView.frame = CGRectMake((width - requiredWidth) / 2, width, requiredWidth, titleHeight);
@@ -655,17 +655,23 @@ static RNFrostedSidebar *rn_frostedMenu;
     
     NSInteger items = [self.itemViews count];
     CGFloat leftPadding = (self.width - self.itemSize.width)/2;
-    CGFloat topPadding = leftPadding;
-    CGFloat totalHeight = items * (self.itemSize.height + leftPadding) + leftPadding;
+    CGFloat topPadding = 16.5f;//leftPadding;
+    CGFloat totalHeight = items * (self.itemSize.height + topPadding) + topPadding + 10;
     CGFloat parentHeight = self.parentViewController.view.bounds.size.height;
     CGFloat initialPadding = 0.0f;
     if (totalHeight < parentHeight) {
         initialPadding = (parentHeight - totalHeight) / 2;
     }
     [self.itemViews enumerateObjectsUsingBlock:^(RNCalloutItemView *view, NSUInteger idx, BOOL *stop) {
-        CGRect frame = CGRectMake(leftPadding, initialPadding + topPadding*idx + self.itemSize.height*idx + topPadding, self.itemSize.width, self.itemSize.height);
-        view.frame = frame;
-        view.layer.cornerRadius = frame.size.width/2.f;
+        if (idx == 0) {
+            CGRect frame = CGRectMake(leftPadding - 5, initialPadding + topPadding*idx + self.itemSize.height*idx + topPadding, self.itemSize.width + 10, self.itemSize.height + 10);
+            view.frame = frame;
+            view.layer.cornerRadius = frame.size.width/2.f;
+        } else {
+            CGRect frame = CGRectMake(leftPadding, 10 + initialPadding + topPadding*idx + self.itemSize.height*idx + topPadding, self.itemSize.width, self.itemSize.height);
+            view.frame = frame;
+            view.layer.cornerRadius = frame.size.width/2.f;
+        }
     }];
     
     self.contentView.contentSize = CGSizeMake(0, items * (self.itemSize.height + leftPadding) + leftPadding + initialPadding * 2);
