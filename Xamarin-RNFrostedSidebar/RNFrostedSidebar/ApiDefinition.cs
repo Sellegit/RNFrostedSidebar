@@ -75,14 +75,15 @@ namespace RNFrostedSidebarBinding {
     [Wrap ("WeakDelegate")]
     RNFrostedSidebarDelegate Delegate { get; set; }
 
-    [Export ("initWithImages:titles:selectedIndices:borderColors:")]
-    IntPtr Constructor (UIImage [] images, string [] titles, NSIndexSet selectedIndices, UIColor [] colors);
+    [Export ("initWithTitles:selectedIndices:borderColors:imageViews:")]
+    IntPtr Constructor (string [] titles, NSIndexSet selectedIndices, UIColor [] colors, UIImageView[] imageViews);
 
-    [Export ("initWithImages:titles:selectedIndices:")]
-    IntPtr Constructor (UIImage [] images, string [] titles, NSIndexSet selectedIndices);
-
-    [Export ("initWithImages:titles:")]
-    IntPtr Constructor (UIImage [] images, string [] titles);
+    // deprecated
+//    [Export ("initWithImages:titles:selectedIndices:")]
+//    IntPtr Constructor (UIImage [] images, string [] titles, NSIndexSet selectedIndices);
+//
+//    [Export ("initWithImages:titles:")]
+//    IntPtr Constructor (UIImage [] images, string [] titles);
 
     [Export ("show")]
     void Show ();

@@ -194,6 +194,20 @@
     return self;
 }
 
+-(instancetype) initWithImageView:(UIImageView*)imageView{
+    self = [super init];
+    if (self) {
+        _imageView = imageView;
+        _titleView = [[UILabel alloc] init];
+        _imageView.backgroundColor = [UIColor clearColor];
+        _imageView.contentMode = UIViewContentModeScaleAspectFit;
+        [self addSubview:_imageView];
+        [self addSubview:_titleView];
+        NSLog(@"%@", _imageView);
+    }
+    return self;
+}
+
 - (void)layoutSubviews {
     [super layoutSubviews];
     
@@ -271,7 +285,7 @@ static RNFrostedSidebar *rn_frostedMenu;
     return rn_frostedMenu;
 }
 
-- (instancetype)initWithImages:(NSArray *)images titles:(NSArray*)titles selectedIndices:(NSIndexSet *)selectedIndices borderColors:(NSArray *)colors {
+- (instancetype)initWithTitles:(NSArray*)titles selectedIndices:(NSIndexSet *)selectedIndices borderColors:(NSArray *)colors imageViews:(NSArray*) imageViews{
     if (self = [super init]) {
         _isSingleSelect = NO;
         _contentView = [[UIScrollView alloc] init];
@@ -290,48 +304,65 @@ static RNFrostedSidebar *rn_frostedMenu;
         _borderWidth = 2;
         _itemBackgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.25];
         
-        if (colors) {
-            NSAssert([colors count] == [images count], @"Border color count must match images count. If you want a blank border, use [UIColor clearColor].");
-        }
+//        if (colors) {
+//            NSAssert([colors count] == [images count], @"Border color count must match images count. If you want a blank border, use [UIColor clearColor].");
+//        }
         
         _selectedIndices = [selectedIndices mutableCopy] ?: [NSMutableIndexSet indexSet];
         _borderColors = colors;
-        _images = images;
+        _images = [NSMutableArray arrayWithCapacity:imageViews.count];
+        for (int i=0; i<_images.count; i++) {
+            [((NSMutableArray*)_images) addObject:((UIImageView*)imageViews[i]).image];
+        }
         _titles = titles;
         
-        [_images enumerateObjectsUsingBlock:^(UIImage *image, NSUInteger idx, BOOL *stop) {
-            RNCalloutItemView *view = [[RNCalloutItemView alloc] init];
-            view.itemIndex = idx;
-            //view.clipsToBounds = YES;
-            view.imageView.image = image;
-            view.titleView.text = titles[idx];
+//        NSLog(@"%@", _images);
+//        [_images enumerateObjectsUsingBlock:^(UIImage *image, NSUInteger idx, BOOL *stop) {
+//            RNCalloutItemView *view = [[RNCalloutItemView alloc] initWithImageView:imageViews[idx]];
+//            NSLog(@"%d", idx);
+//            view.itemIndex = idx;
+//            //view.clipsToBounds = YES;
+//            view.titleView.text = titles[idx];
+//            [_contentView addSubview:view];
+//            
+//            [_itemViews addObject:view];
+//            
+//            if (_borderColors) {
+//                view.titleView.textColor = _borderColors[idx];
+//            }
+//            
+//            //if (_borderColors && _selectedIndices && [_selectedIndices containsIndex:idx]) {
+//            //    UIColor *color = _borderColors[idx];
+//            //    view.layer.borderColor = color.CGColor;
+//            //}
+//            //else {
+//            //    view.layer.borderColor = [UIColor clearColor].CGColor;
+//            //}
+//        }];
+        
+        for (int i=0; i<imageViews.count; i++) {
+            RNCalloutItemView *view = [[RNCalloutItemView alloc] initWithImageView:imageViews[i]];
+            view.itemIndex = i;
+            view.titleView.text = titles[i];
             [_contentView addSubview:view];
             
             [_itemViews addObject:view];
             
             if (_borderColors) {
-                view.titleView.textColor = _borderColors[idx];
+                view.titleView.textColor = _borderColors[i];
             }
-            
-            //if (_borderColors && _selectedIndices && [_selectedIndices containsIndex:idx]) {
-            //    UIColor *color = _borderColors[idx];
-            //    view.layer.borderColor = color.CGColor;
-            //}
-            //else {
-            //    view.layer.borderColor = [UIColor clearColor].CGColor;
-            //}
-        }];
+        }
     }
     return self;
 }
 
-- (instancetype)initWithImages:(NSArray *)images titles:(NSArray*)titles selectedIndices:(NSIndexSet *)selectedIndices {
-    return [self initWithImages:images titles:titles selectedIndices:selectedIndices borderColors:nil];
-}
-
-- (instancetype)initWithImages:(NSArray *)images titles:(NSArray*)titles {
-    return [self initWithImages:images titles:titles selectedIndices:nil borderColors:nil];
-}
+//- (instancetype)initWithImages:(NSArray *)images titles:(NSArray*)titles selectedIndices:(NSIndexSet *)selectedIndices {
+//    return [self initWithImages:images titles:titles selectedIndices:selectedIndices borderColors:nil];
+//}
+//
+//- (instancetype)initWithImages:(NSArray *)images titles:(NSArray*)titles {
+//    return [self initWithImages:images titles:titles selectedIndices:nil borderColors:nil];
+//}
 
 - (instancetype)init {
     NSAssert(NO, @"Unable to create with plain init.");
