@@ -203,7 +203,7 @@
         _imageView.contentMode = UIViewContentModeScaleAspectFit;
         [self addSubview:_imageView];
         [self addSubview:_titleView];
-        NSLog(@"%@", _imageView);
+//        NSLog(@"%@", _imageView);
     }
     return self;
 }
